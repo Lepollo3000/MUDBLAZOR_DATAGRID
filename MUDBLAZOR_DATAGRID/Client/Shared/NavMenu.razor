@@ -1,0 +1,15 @@
+﻿<MudDrawer @bind-Open="SideBarOpen" Elevation="1">
+	<MudDrawerHeader>
+		<MudText Typo="Typo.h5" Color="Color.Primary" Style="margin-top:10px; margin-left:15px;">Code-Maze</MudText>
+	</MudDrawerHeader>
+	<MudNavMenu>
+		<MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+		<MudNavLink Href="/counter" Icon="@Icons.Material.Filled.PlusOne">Counter</MudNavLink>
+		<MudNavLink Href="/fetchdata" Icon="@Icons.Material.Filled.Storage">FetchData</MudNavLink>
+	</MudNavMenu>
+</MudDrawer>
+
+@code {
+	[Parameter]
+	public bool SideBarOpen { get; set; }
+}
